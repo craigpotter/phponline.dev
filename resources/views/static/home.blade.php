@@ -12,4 +12,7 @@
             </div>
         </div>
     </div>
+
+    <livewire:articles.latest-articles />
+    
 </x-app-layout>
