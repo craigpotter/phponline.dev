@@ -35,6 +35,11 @@ class Package extends Model
         return $this->title;
     }
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(
