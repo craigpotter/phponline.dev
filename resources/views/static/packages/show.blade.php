@@ -82,8 +82,14 @@
                                     </dt>
                                     <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
                                         <div
-                                            class="flex items-baseline text-2xl leading-8 font-semibold text-indigo-600">
-                                            {{ $package->meta['require']['php'] ?? 'unknown' }}
+                                            class="flex items-baseline text-2xl leading-8 font-semibold text-indigo-600"
+                                        >
+                                            @php
+                                                $phpVersion = $package->meta['require']['php'];
+                                                $phpVersion = explode('|', $phpVersion);
+                                                $phpVersion = implode(', ', $phpVersion)
+                                            @endphp
+                                            {{ $phpVersion ?? 'unknown' }}
                                         </div>
                                     </dd>
                                 </dl>

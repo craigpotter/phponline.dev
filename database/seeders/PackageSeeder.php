@@ -28,6 +28,26 @@ class PackageSeeder extends Seeder
             'external_url' => 'https://packagist.org/packages/juststeveking/cypher-query-builder',
             'user_id' => 1,
         ],
+        [
+            'title' => 'Laravel Feature Flags',
+            'external_url' => 'https://packagist.org/packages/juststeveking/laravel-feature-flags',
+            'user_id' => 1,
+        ],
+        [
+            'title' => 'Twig Asset Version Extension',
+            'external_url' => 'https://packagist.org/packages/railto/twig-asset-version-extension',
+            'user_id' => 1,
+        ],
+        [
+            'title' => 'PSR Log',
+            'external_url' => 'https://packagist.org/packages/psr/log',
+            'user_id' => 1,
+        ],
+        [
+            'title' => 'Laravel IDE Helper',
+            'external_url' => 'https://packagist.org/packages/barryvdh/laravel-ide-helper',
+            'user_id' => 1,
+        ]
     ];
 
     public function run()
