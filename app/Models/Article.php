@@ -32,6 +32,7 @@ class Article extends Model
         'summary',
         'body',
         'status',
+        'level',
         'user_id',
         'category_id',
     ];

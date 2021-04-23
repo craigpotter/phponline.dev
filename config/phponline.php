@@ -43,12 +43,12 @@ return [
             //     'title' => 'About PHP Online',
             //     'pattern' => 'about'
             // ],
-            // [
-            //     'name' => 'Blog',
-            //     'link' => '/blog',
-            //     'title' => 'View our Blog',
-            //     'pattern' => 'articles:index'
-            // ],
+            [
+                'name' => 'Blog',
+                'link' => '/blog',
+                'title' => 'View our Blog',
+                'pattern' => 'articles:index'
+            ],
             // [
             //     'name' => 'Contact',
             //     'link' => '/contact-us',

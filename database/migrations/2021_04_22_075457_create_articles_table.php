@@ -24,6 +24,8 @@ class CreateArticlesTable extends Migration
 
             $table->string('status'); // Draft, Published, Denied
 
+            $table->string('level');
+
             $table->foreignId('user_id');
             $table->foreignId('category_id');
 

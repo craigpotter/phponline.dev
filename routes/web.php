@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Route;
  */
 Route::as('static:')->group(function () {
     Route::view('/', 'static.home')->name('home');
+
+    Route::get(
+        'blog',
+        App\Http\Controllers\Static\Articles\IndexController::class,
+    )->name('articles:index');
 });
 
 /**

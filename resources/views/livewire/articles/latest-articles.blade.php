@@ -5,7 +5,7 @@
                 Latest articles
             </h2>
             <x-links.standard
-                href="#"
+                href="{{ route('static:articles:index') }}"
                 title="See all articles"
             >
                 See all articles

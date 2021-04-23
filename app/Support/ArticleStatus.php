@@ -14,6 +14,7 @@ class ArticleStatus
     public const ALL = [
         self::DRAFT,
         self::DENIED,
+        self::PENDING,
         self::PUBLISHED,
     ];
 }
