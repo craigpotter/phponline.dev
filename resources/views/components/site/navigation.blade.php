@@ -78,25 +78,25 @@
 
                                 <div class="border-t border-gray-100"></div>
 
-                                <x-jet-dropdown-link href="{{ route('dashboard:packages') }}">
+                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:packages') }}">
                                     {{ __('Your Packages') }}
-                                </x-jet-dropdown-link>
+                                </x-jet-dropdown-link> --}}
 
-                                <x-jet-dropdown-link href="{{ route('dashboard:articles') }}">
+                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:articles') }}">
                                     {{ __('Your Posts') }}
-                                </x-jet-dropdown-link>
+                                </x-jet-dropdown-link> --}}
 
-                                <x-jet-dropdown-link href="{{ route('dashboard:podcasts') }}">
+                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:podcasts') }}">
                                     {{ __('Your Podcasts') }}
-                                </x-jet-dropdown-link>
+                                </x-jet-dropdown-link> --}}
 
-                                <x-jet-dropdown-link href="{{ route('dashboard:links') }}">
+                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:links') }}">
                                     {{ __('Your Links') }}
-                                </x-jet-dropdown-link>
+                                </x-jet-dropdown-link> --}}
 
-                                <x-jet-dropdown-link href="{{ route('dashboard:feeds') }}">
+                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:feeds') }}">
                                     {{ __('Your Feeds') }}
-                                </x-jet-dropdown-link>
+                                </x-jet-dropdown-link> --}}
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
