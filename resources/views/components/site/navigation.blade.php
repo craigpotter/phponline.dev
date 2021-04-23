@@ -78,15 +78,15 @@
 
                                 <div class="border-t border-gray-100"></div>
 
-                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:packages') }}">
+                                <x-jet-dropdown-link href="{{ route('dashboard:packages:index') }}">
                                     {{ __('Your Packages') }}
+                                </x-jet-dropdown-link>
+
+                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:articles:index') }}">
+                                    {{ __('Your Articles') }}
                                 </x-jet-dropdown-link> --}}
 
-                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:articles') }}">
-                                    {{ __('Your Posts') }}
-                                </x-jet-dropdown-link> --}}
-
-                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:podcasts') }}">
+                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:podcasts:index') }}">
                                     {{ __('Your Podcasts') }}
                                 </x-jet-dropdown-link> --}}
 
