@@ -43,4 +43,19 @@ Route::prefix('packages')->as('packages:')->group(function () {
  */
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::view('dashboard', 'app.dashboard.index')->name('dashboard:index');
+
+    /**
+     * Dashboard Actions
+     */
+    Route::prefix('dashboard')->as('dashboard:')->group(function () {
+        /**
+         * Packages
+         */
+        Route::prefix('packages')->as('packages:')->group(function () {
+            Route::get(
+                '/',
+                App\Http\Controllers\Dashboard\Packages\IndexController::class,
+            )->name('index');
+        });
+    });
 });

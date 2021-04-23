@@ -10,7 +10,7 @@
                 <span class="ml-3 shadow-sm rounded-md">
                     @auth
                         <a
-                            href="{{ route('dashboard:packages') }}"
+                            href="{{ route('dashboard:packages:index') }}"
                             class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50 focus:outline-none focus:shadow-outline-indigo focus:border-red-600 active:bg-gray-50 transition duration-150 ease-in-out"
                         >
                           Submit a package
@@ -28,7 +28,7 @@
         </x-slot>
     </x-site.header>
 
-    <x-site.container>
+    <x-site.container class="max-w-screen-xl">
 
         <section class="mb-12">
             <div class="mt-6 grid gap-16 border-t-2 border-gray-100 pt-3 grid-cols-1 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
