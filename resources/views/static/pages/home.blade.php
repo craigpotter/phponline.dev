@@ -14,5 +14,7 @@
     </div>
 
     <livewire:articles.latest-articles />
+
+    <livewire:packages.latest-packages />
     
 </x-app-layout>
