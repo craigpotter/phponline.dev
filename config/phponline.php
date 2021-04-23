@@ -49,12 +49,12 @@ return [
                 'title' => 'View our Blog',
                 'pattern' => 'articles:index'
             ],
-            // [
-            //     'name' => 'Contact',
-            //     'link' => '/contact-us',
-            //     'title' => 'Get in touch with PHP Online',
-            //     'pattern' => 'contact'
-            // ],
+            [
+                'name' => 'Contact',
+                'link' => '/contact-us',
+                'title' => 'Get in touch with PHP Online',
+                'pattern' => 'contact'
+            ],
         ]
     ]
 ];

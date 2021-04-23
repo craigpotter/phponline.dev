@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::as('static:')->group(function () {
     Route::view('/', 'static.pages.home')->name('home');
     Route::view('about', 'static.pages.about')->name('about');
+    Route::view('contact-us', 'static.pages.contact')->name('contact');
 
     Route::get(
         'blog',
