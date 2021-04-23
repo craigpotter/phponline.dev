@@ -22,12 +22,12 @@ return [
             //     'title' => 'View our Tutorials',
             //     'pattern' => 'categories:show'
             // ],
-            // [
-            //     'name' => 'Packages',
-            //     'link' => '/packages',
-            //     'title' => 'View our Packages',
-            //     'pattern' => 'packages:index'
-            // ],
+            [
+                'name' => 'Packages',
+                'link' => '/packages',
+                'title' => 'View our Packages',
+                'pattern' => 'packages:index'
+            ],
             // [
             //     'name' => 'Podcasts',
             //     'link' => '/podcasts',

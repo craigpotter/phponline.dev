@@ -18,7 +18,7 @@
         @endauth --}}
     </x-site.header>
 
-    <x-site.container>
+    <x-site.container class="max-w-screen-xl">
         <section class="my-12">
             <div class="w-full text-md leading-7 text-gray-700">
                 {!! $package->body !!}
