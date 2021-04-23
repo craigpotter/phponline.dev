@@ -17,6 +17,28 @@ Route::as('static:')->group(function () {
 });
 
 /**
+ * Package Routes
+ */
+Route::prefix('packages')->as('packages:')->group(function () {
+
+    /**
+     * Show All Packages
+     */
+    Route::get(
+        '/',
+        App\Http\Controllers\Static\Packages\IndexController::class,
+    )->name('index');
+
+    /**
+     * Show a Package
+     */
+    Route::get(
+        '{package}',
+        App\Http\Controllers\Static\Packages\ShowController::class,
+        )->name('show');
+});
+
+/**
  * Authenticated Routes
  */
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
