@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         if (App::environment('local')) {
             $this->call([
                 LocalUserSeeder::class,
+                PackageSeeder::class,
             ]);
         
             Article::factory(50)->create();

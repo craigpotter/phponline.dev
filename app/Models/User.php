@@ -75,4 +75,12 @@ class User extends Authenticatable
             'user_id',
         );
     }
+
+    public function packages(): HasMany
+    {
+        return $this->hasMany(
+            Package::class,
+            'user_id',
+        );
+    }
 }
