@@ -37,12 +37,12 @@ return [
         ],
 
         'footer' => [
-            // [
-            //     'name' => 'About',
-            //     'link' => '/about',
-            //     'title' => 'About PHP Online',
-            //     'pattern' => 'about'
-            // ],
+            [
+                'name' => 'About',
+                'link' => '/about',
+                'title' => 'About PHP Online',
+                'pattern' => 'about'
+            ],
             [
                 'name' => 'Blog',
                 'link' => '/blog',

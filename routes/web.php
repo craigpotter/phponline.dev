@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
  * Static Routes
  */
 Route::as('static:')->group(function () {
-    Route::view('/', 'static.home')->name('home');
+    Route::view('/', 'static.pages.home')->name('home');
+    Route::view('about', 'static.pages.about')->name('about');
 
     Route::get(
         'blog',
