@@ -47,6 +47,16 @@ class PackageSeeder extends Seeder
             'title' => 'Laravel IDE Helper',
             'external_url' => 'https://packagist.org/packages/barryvdh/laravel-ide-helper',
             'user_id' => 1,
+        ],
+        [
+            'title' => 'Little Auditor',
+            'external_url' => 'https://packagist.org/packages/rrvwmrrr/little-auditor',
+            'user_id' => 2,
+        ],
+        [
+            'title' => 'Laravel Chunk Receiver',
+            'external_url' => 'https://packagist.org/packages/jamessessford/laravel-chunk-receiver',
+            'user_id' => 2,
         ]
     ];
 
