@@ -26,6 +26,15 @@
         </section>
 
         @if(! is_null($package->meta))
+
+            @if( isset($package->meta['abandoned']) && $package->meta['abandoned'])
+                <section class="my-12">
+                    <div class="w-full text-md leading-7 text-red-400">
+                        This package has been marked as abandoned on Packagist!
+                    </div>
+                </section>
+            @endif
+
             <section class="my-12">
                 <div>
                     <div class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow md:grid-cols-4">

@@ -4,6 +4,13 @@
         <h3 class="mx-3 text-white font-semibold text-lg">
             {{ $package->title }}
         </h3>
+        @if(! is_null($package->meta))
+            @if( isset($package->meta['abandoned']) && $package->meta['abandoned'])
+                <span class="text-white bg-red-400 px-4 rounded-sm">
+                    Abandoned
+                </span>
+            @endif
+        @endif
     </a>
     <div class="py-4 px-6">
         <div class="py-2 text-lg text-gray-700">
