@@ -57,5 +57,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 App\Http\Controllers\Dashboard\Packages\IndexController::class,
             )->name('index');
         });
+
+        /**
+         * Articles
+         */
+        Route::prefix('articles')->as('articles:')->group(function () {
+            Route::get(
+                '/',
+                App\Http\Controllers\Dashboard\Articles\IndexController::class,
+            )->name('index');
+        });
     });
 });
