@@ -66,6 +66,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 '/',
                 App\Http\Controllers\Dashboard\Articles\IndexController::class,
             )->name('index');
+            Route::get(
+                'create',
+                App\Http\Controllers\Dashboard\Articles\CreateController::class,
+            )->name('create');
         });
     });
 });
