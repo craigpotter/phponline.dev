@@ -75,6 +75,11 @@ class Article extends Model
         return static::uuid($attributes['uuid']);
     }
 
+    public function published(): bool
+    {
+        return $this->status === 'published';
+    }
+
     public function publish(): void
     {
         event(new ArticlePublished($this->uuid));
