@@ -82,9 +82,9 @@
                                     {{ __('Your Packages') }}
                                 </x-jet-dropdown-link>
 
-                                {{-- <x-jet-dropdown-link href="{{ route('dashboard:articles:index') }}">
+                                <x-jet-dropdown-link href="{{ route('dashboard:articles:index') }}">
                                     {{ __('Your Articles') }}
-                                </x-jet-dropdown-link> --}}
+                                </x-jet-dropdown-link>
 
                                 {{-- <x-jet-dropdown-link href="{{ route('dashboard:podcasts:index') }}">
                                     {{ __('Your Podcasts') }}
