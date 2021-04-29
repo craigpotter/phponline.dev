@@ -13,7 +13,11 @@ class IndexController extends Controller
     public function __invoke(): View
     {
         return view('static.blog.index', [
-            'articles' => Article::published()->latest()->paginate()
+            'articles' => Article::with([
+                'author',
+                'category',
+                'topics',
+            ])->published()->latest()->paginate()
         ]);
     }
 }

@@ -47,6 +47,11 @@ class Article extends Model
         return $this->title;
     }
 
+    public function getRouteKeyName(): string
+    {
+        return 'title';
+    }
+
     public function author(): BelongsTo
     {
         return $this->belongsTo(

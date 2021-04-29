@@ -3,20 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 /**
- * Static Routes
- */
-Route::as('static:')->group(function () {
-    Route::view('/', 'static.pages.home')->name('home');
-    Route::view('about', 'static.pages.about')->name('about');
-    Route::view('contact-us', 'static.pages.contact')->name('contact');
-
-    Route::get(
-        'blog',
-        App\Http\Controllers\Static\Articles\IndexController::class,
-    )->name('articles:index');
-});
-
-/**
  * Package Routes
  */
 Route::prefix('packages')->as('packages:')->group(function () {
@@ -72,4 +58,23 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             )->name('create');
         });
     });
+});
+
+/**
+ * Static Routes
+ */
+Route::as('static:')->group(function () {
+    Route::view('/', 'static.pages.home')->name('home');
+    Route::view('about', 'static.pages.about')->name('about');
+    Route::view('contact-us', 'static.pages.contact')->name('contact');
+
+    Route::get(
+        'blog',
+        App\Http\Controllers\Static\Articles\IndexController::class,
+    )->name('articles:index');
+    
+    Route::get(
+        '{user}/{articleSlug}',
+        App\Http\Controllers\Static\Articles\ShowController::class,
+    )->name('articles:show');
 });
