@@ -16,12 +16,12 @@ return [
     'nav' => [
 
         'main' => [
-            // [
-            //     'name' => 'Tutorials',
-            //     'link' => '/category/tutorials',
-            //     'title' => 'View our Tutorials',
-            //     'pattern' => 'categories:show'
-            // ],
+            [
+                'name' => 'Articles',
+                'link' => '/blog',
+                'title' => 'View our Articles',
+                'pattern' => 'articles:index'
+            ],
             [
                 'name' => 'Packages',
                 'link' => '/packages',
