@@ -17,6 +17,7 @@ use App\Events\Articles\ArticlePublished;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Article extends Model
 {
@@ -51,6 +52,14 @@ class Article extends Model
         return $this->belongsTo(
             User::class,
             'user_id',
+        );
+    }
+
+    public function topics(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            Topic::class,
+            'article_topic',
         );
     }
 
