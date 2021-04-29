@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Projectors\Articles;
 
 use App\Models\Article;
+use App\Support\ArticleStatus;
+use App\Events\Articles\ArticleDenied;
 use App\Events\Articles\ArticleCreated;
 use App\Events\Articles\ArticleDeleted;
-use App\Events\Articles\ArticleDenied;
 use App\Events\Articles\ArticlePublished;
-use App\Support\ArticleStatus;
 use Spatie\EventSourcing\EventHandlers\Projectors\Projector;
 
 class ArticleStatusProjector extends Projector

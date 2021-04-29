@@ -9,8 +9,8 @@
         </x-links.standard>
     </div>
     <div class="mt-4 h-24 flex items-center">
-        <a class="text-lg text-gray-700 font-medium" href="">
-            {{ $article->title}}
+        <a class="text-lg text-gray-700 font-medium" href="{{ route('static:articles:show', [$article->author->username, $article->slug]) }}">
+            {{ $article->title }}
         </a>
     </div>
     <div class="flex justify-between items-center mt-4">
