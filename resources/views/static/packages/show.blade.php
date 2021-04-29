@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-site.header class="py-6 bg-gray-900 mb-12">
-        <h2 class="text-3xl leading-9 font-semibold tracking-tight text-white md:text-4xl md:leading-10">
+        <h2 class="text-3xl leading-9 font-semibold tracking-tight text-white md:text-4xl md:leading-10 flex flex-col sm:flex-row justify-between w-full">
             <a href="" target="__blank" rel="noopener"
                class="inline-flex items-center space-x-3">
                 <x-icons.link-external class="w-6 h-6"/>
@@ -8,6 +8,11 @@
                     {{ $package->title }}
                 </span>
             </a>
+            @if( isset($package->meta['abandoned']) && $package->meta['abandoned'])
+                <span class="text-red-400" title="{{ $package->title }} has been marked as abandoned on Packagist">
+                    Abandoned
+                </span>
+            @endif
         </h2>
         {{-- @auth
             <x-slot name="actions">

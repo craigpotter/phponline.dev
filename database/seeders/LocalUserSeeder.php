@@ -29,21 +29,5 @@ class LocalUserSeeder extends Seeder
                 'name' => 'technical lead',
             ])->create()->id,
         ]);
-
-        User::create([
-            'name' => 'James Sessford',
-            'email' => 'hello@jamessessford.com',
-            'password' => Hash::make('password'),
-            'twitter' => 'sesticles',
-            'github' => 'jamessessford',
-            'username' => 'jamessessford',
-            'available' => true,
-            'company_id' => Company::factory([
-                'name' => 'Preferred Management Solutions',
-            ])->create()->id,
-            'job_title_id' => JobTitle::factory([
-                'name' => 'systems architect',
-            ])->create()->id,
-        ]);
     }
 }
