@@ -10,7 +10,7 @@
                 <span class="ml-3 shadow-sm rounded-md">
                     @auth
                         <a
-                            href=""
+                            href="{{ route('dashboard:articles:index') }}"
                             class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50 focus:outline-none focus:shadow-outline-indigo focus:border-red-600 active:bg-gray-50 transition duration-150 ease-in-out"
                         >
                           Submit an article
