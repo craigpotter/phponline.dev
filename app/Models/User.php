@@ -85,4 +85,12 @@ class User extends Authenticatable
             'user_id',
         );
     }
+
+    public function podcasts(): HasMany
+    {
+        return $this->hasMany(
+            Podcast::class,
+            'user_id',
+        );
+    }
 }

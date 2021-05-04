@@ -13,12 +13,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         if (App::environment('local')) {
-            Article::factory(500)->create();
+            Article::factory(50)->create();
             
             $this->call([
                 LocalUserSeeder::class,
                 PackageSeeder::class,
                 TopicSeeder::class,
+            ]);
+
+            $this->call([
+                PodcastSeeder::class,
             ]);
         }
     }
