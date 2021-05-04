@@ -14,4 +14,11 @@ class PackageBuilder extends Builder
 
         return $this;
     }
+
+    public function notPublished(): self
+    {
+        $this->where('published', false);
+
+        return $this;
+    }
 }
