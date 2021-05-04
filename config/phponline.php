@@ -26,7 +26,7 @@ return [
                 'name' => 'Packages',
                 'link' => '/packages',
                 'title' => 'View our Packages',
-                'pattern' => 'packages:index'
+                'pattern' => 'static:packages:index'
             ],
             // [
             //     'name' => 'Podcasts',

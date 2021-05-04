@@ -9,24 +9,27 @@
 
     <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 p-6">
         @foreach ($data as $person)
-            <li class="col-span-1 bg-white rounded-lg shadow hover:shadow-md">
-                <img
-                    alt="avatar"
-                    class="w-full h-56 object-cover object-center"
-                    src="{{ $person['url'] }}.png"
-                />
+            <li class="col-span-1 bg-white rounded-lg shadow hover:shadow-lg">
                 <a
                     href="{{ $person['url'] }}"
                     rel="nofollow noopener"
                     target="_blank"
-                    class="flex items-center px-6 py-3 bg-gray-900"
                 >
-                    <x-icons.github
-                        class="h-6 w-6 text-gray-100"
-                    />
-                    <p class="mx-3 text-white font-semibold text-lg">
-                        {{ $person['url'] }}
-                    </p>
+                    <div>
+                        <img
+                            alt="avatar"
+                            class="w-full h-56 object-cover object-center"
+                            src="{{ $person['url'] }}.png"
+                        />
+                    </div>
+                    <div class="flex items-center px-6 py-3 bg-gray-900">                        
+                        <x-icons.github
+                            class="h-6 w-6 text-gray-100"
+                        />
+                        <p class="mx-3 text-white font-semibold text-lg">
+                            {{ $person['url'] }}
+                        </p>
+                    </div>
                 </a>
             </li>
         @endforeach

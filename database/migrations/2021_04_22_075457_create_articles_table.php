@@ -22,7 +22,7 @@ class CreateArticlesTable extends Migration
             $table->string('summary', 160);
             $table->text('body');
 
-            $table->string('status'); // Draft, Published, Denied
+            $table->string('status')->index(); // Draft, Published, Denied
 
             $table->string('level');
 

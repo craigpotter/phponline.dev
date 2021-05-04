@@ -5,7 +5,7 @@
                 Latest open source packages
             </h2>
             <x-links.standard
-                href=""
+                href="{{ route('static:packages:index') }}"
                 title="See all packages"
             >
                 See all packages

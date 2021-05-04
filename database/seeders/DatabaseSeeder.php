@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         if (App::environment('local')) {
-            Article::factory(50)->create();
+            Article::factory(500)->create();
             
             $this->call([
                 LocalUserSeeder::class,

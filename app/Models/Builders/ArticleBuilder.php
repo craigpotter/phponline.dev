@@ -15,4 +15,11 @@ class ArticleBuilder extends Builder
 
         return $this;
     }
+
+    public function unPublished(): self
+    {
+        $this->whereNotIn('status', [ArticleStatus::PUBLISHED]);
+
+        return $this;
+    }
 }

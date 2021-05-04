@@ -1,5 +1,5 @@
 <div class="flex flex-col bg-white w-full mx-auto rounded-lg shadow-md hover:shadow-lg">
-    <a href="{{ route('packages:show', $package->slug) }}" class="flex items-center justify-between px-6 py-3 bg-gray-900 cursor-pointer">
+    <a href="{{ route('static:packages:show', $package->slug) }}" class="flex items-center justify-between px-6 py-3 bg-gray-900 cursor-pointer">
         <span class="flex items-center">
             <x-icons.packagist class="h-6 w-6 text-white fill-current" />
             <h3 class="mx-3 text-white font-semibold text-lg">

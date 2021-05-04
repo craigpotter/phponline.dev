@@ -29,9 +29,9 @@
                                     </p>
                                     <div class="ml-2 flex-shrink-0 flex">
                                         <p
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full {{ $article->published() ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800' }}"
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full {{ $article->isPublished() ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800' }}"
                                         >
-                                            {{ $article->published() ? 'published': 'not published' }}
+                                            {{ $article->status }}
                                         </p>
                                     </div>
                                 </div>
