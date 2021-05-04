@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace App\Jobs\Podcasts;
 
+use App\Models\PodcastEpisode;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Laminas\Feed\Reader\Reader;
 
 class FetchFeedItems implements ShouldQueue
 {
@@ -32,6 +34,17 @@ class FetchFeedItems implements ShouldQueue
      */
     public function handle()
     {
-        //
+        $feed = Reader::import($this->feedUrl);
+
+        foreach ($feed as $item) {
+            dd($item);
+            PodcastEpisode::create([
+                'title' => $item->getTitle(),
+                'description' => $item->getDescription(),
+                'show_notes' => $item->getContent(),
+                'external_url' => $item->getLink(),
+                'podcast_id' => $this->podcastId,
+            ]);
+        }
     }
 }

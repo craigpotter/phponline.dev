@@ -6,6 +6,7 @@ namespace App\Models;
 
 use App\Models\Concerns\HasSlug;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Podcast extends Model
@@ -43,6 +44,14 @@ class Podcast extends Model
         return $this->belongsTo(
             User::class,
             'user_id',
+        );
+    }
+
+    public function episodes(): HasMany
+    {
+        return $this->hasMany(
+            PodcastEpisode::class,
+            'podcast_id',
         );
     }
 }
