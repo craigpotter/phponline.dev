@@ -4,7 +4,7 @@
 
             <!-- Logo section -->
             <div class="flex items-center px-2 lg:px-0 w-1/5">
-                <a href="{{ route('static:home') }}" class="flex-shrink-0">
+                <a href="{{ route('static:home') }}" class="flex-shrink-0" aria-label="PHP Online Logo">
                     <x-site.logo-text class="hidden lg:block h-8 w-auto" alt="PHP Online Logo" />
                     <x-site.logo-image class="block lg:hidden h-8 w-auto" alt="PHP Online Logo" />
                 </a>
