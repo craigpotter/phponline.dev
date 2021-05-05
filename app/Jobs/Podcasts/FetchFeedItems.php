@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Jobs\Podcasts;
 
+use App\Actions\Podcasts\ConvertToObject;
 use App\Models\PodcastEpisode;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -37,12 +38,22 @@ class FetchFeedItems implements ShouldQueue
         $feed = Reader::import($this->feedUrl);
 
         foreach ($feed as $item) {
-            dd($item);
+            // Covert Feed item into DTO
+            $handler = new ConvertToObject();
+
+            $episode = $handler->handle(item: $item);
+
             PodcastEpisode::create([
-                'title' => $item->getTitle(),
-                'description' => $item->getDescription(),
-                'show_notes' => $item->getContent(),
-                'external_url' => $item->getLink(),
+                'title' => $episode->title,
+                'description' => $episode->description,
+                'show_notes' => $episode->showNotes,
+                'external_url' => $episode->link,
+                'media' => [
+                    'url' => $episode->media->url,
+                    'length' => $episode->media->length,
+                    'type' => $episode->media->type,
+                ],
+                'published_at' => $episode->pubDate,
                 'podcast_id' => $this->podcastId,
             ]);
         }
