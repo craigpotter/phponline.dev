@@ -16,5 +16,7 @@
     <livewire:articles.latest-articles />
 
     <livewire:packages.latest-packages />
+
+    <livewire:podcasts.latest-podcasts />
     
 </x-app-layout>

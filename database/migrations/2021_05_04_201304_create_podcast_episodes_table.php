@@ -16,7 +16,6 @@ class CreatePodcastEpisodesTable extends Migration
         Schema::create('podcast_episodes', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->uuid('uuid');
             $table->text('description')->nullable();
             $table->text('show_notes')->nullable();
             $table->string('external_url');

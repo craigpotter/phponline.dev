@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Podcast;
 use Illuminate\Database\Seeder;
+use Ramsey\Uuid\Uuid;
 
 class PodcastSeeder extends Seeder
 {
@@ -34,6 +35,7 @@ class PodcastSeeder extends Seeder
     {
         foreach ($this->podcasts as $podcast) {
             Podcast::create([
+                'uuid' => Uuid::uuid4()->toString(),
                 'title' => $podcast['title'],
                 'external_url' => $podcast['external_url'],
                 'feed_url' => $podcast['feed_url'],
