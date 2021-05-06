@@ -4,20 +4,21 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use Ramsey\Uuid\Uuid;
 use App\Casts\Normalise;
-use App\Models\Concerns\HasSlug;
-use App\Models\Concerns\HasUuid;
-use App\Events\Articles\ArticleDenied;
 use App\Events\Articles\ArticleCreated;
 use App\Events\Articles\ArticleDeleted;
-use App\Models\Builders\ArticleBuilder;
-use Illuminate\Database\Eloquent\Model;
+use App\Events\Articles\ArticleDenied;
 use App\Events\Articles\ArticlePublished;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\Builders\ArticleBuilder;
+use App\Models\Concerns\HasSlug;
+use App\Models\Concerns\HasUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\HtmlString;
+use Ramsey\Uuid\Uuid;
 
 class Article extends Model
 {
@@ -50,6 +51,13 @@ class Article extends Model
     public function getRouteKeyName(): string
     {
         return 'title';
+    }
+
+    public function markdownBody()
+    {
+        return new HtmlString(
+            app('markdown')->convertToHtml($this->body ?? '')
+        );
     }
 
     public function author(): BelongsTo
@@ -109,7 +117,7 @@ class Article extends Model
         event(new ArticleDeleted($this->uuid));
     }
 
-    public static function uuid(string $uuid):? Article
+    public static function uuid(string $uuid): ?Article
     {
         return static::where('uuid', $uuid)->first();
     }
